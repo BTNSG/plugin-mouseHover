@@ -11,7 +11,7 @@
 
 __mouseHover__ is a plugin for [Corona](https://coronalabs.com/products/corona-sdk/) projects that are targeting Windows and macOS. The plugin allows you to detect when the mouse cursor is hovering over display objects simply by adding a "mouseHover" event listener to them. 
 
-The *mouseHover* event has a *"began"*, *"moved"* and an *"ended"* phase. The event also passes on the cursor location as _event.x_ and _event.y_.
+The *mouseHover* event has a *"began"*, *"moved"* and an *"ended"* phase. The event also passes on the target object (_event.target_) and the cursor location (_event.x_ and _event.y_).
 
 The propogation of the _mouseHover_ event honors Corona's layered [drawing model](https://docs.coronalabs.com/guide/graphics/group.html#drawmodel). The event starts at the foremost display object and works its way back. If any of the objects along the way `return true` in their event listeners, the propogation is stopped.
 
@@ -26,6 +26,12 @@ Objects that are not visible (i.e. [object.isVisible](https://docs.coronalabs.co
 ### Functions
 
 ##### [mouseHover.setScope()](setScope.markdown)
+
+##### [mouseHover.activate()](activate.markdown)
+
+##### [mouseHover.deactivate()](deactivate.markdown)
+
+##### [mouseHover.unRequire()](unRequire.markdown)
 
 
 ### Properties

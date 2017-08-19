@@ -6,7 +6,7 @@
 | __Library__          | [mouseHover.*](Readme.markdown)
 | __Return value__     | [Table](http://docs.coronalabs.com/api/type/Table.html)
 | __Keywords__         | None
-| __See also__         | [mouseHover.saveTable()](saveTable.markdown)
+
 
 
 ## Overview
