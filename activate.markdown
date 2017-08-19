@@ -10,7 +10,7 @@
 
 ## Overview
 
-This activates the Runtime event listener used by the plugin to check for hover events. Note that the plugin is activated by default when you `require` it. You'd only ever have to call this function if you had previously deactivated the listener by using [mouseHover.deactivate()](deactivate.markdown)
+This activates the Runtime event listener that's used by the plugin to check for hover events. Note that the plugin is activated by default when you `require` it. You'd only ever have to call this function if you had previously deactivated the plugin by using [mouseHover.deactivate()](deactivate.markdown)
 
 
 
