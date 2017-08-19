@@ -2,18 +2,18 @@
 
 |                      | &nbsp; 
 | -------------------- | ---------------------------------------------------------------
-| __Type__             | [CoronaLibrary](https://docs.coronalabs.com/api/type/CoronaLibrary/index.html)
+| __Type__             | [Plugin](https://docs.coronalabs.com/plugin/)
 | __Corona Store__     | [mouseHover](http://store.coronalabs.com/plugin/mouseHover)
 | __Keywords__         | 
 | __See also__         | 
 
 ## Overview
 
-__mouseHover__ is a plugin for your [Corona](https://coronalabs.com/products/corona-sdk/) projects that are targeting Windows and macOS. It allows you to dectect when the mouse is hovering over display objects simply by adding a "mouseHover" event listener. 
+__mouseHover__ is a plugin for [Corona](https://coronalabs.com/products/corona-sdk/) projects that are targeting Windows and macOS. The plugin allows you to detect when the mouse cursor is hovering over display objects simply by adding a "mouseHover" event listener to them. 
 
-The *mouseHover* event captures *"began"*, *"moved"* and *"ended"* phases and also passes on the cursor location as _event.x_ and _event.y_.
+The *mouseHover* event has a *"began"*, *"moved"* and an *"ended"* phase. The event also passes on the cursor location as _event.x_ and _event.y_.
 
-The event propogation honors Corona's layered [drawing model](https://docs.coronalabs.com/guide/graphics/group.html#drawmodel). The event starts at the foremost display object and works its way down to the rearmost display object. If any of the event listeners along the way return `true`, the propogation is stopped.
+The propogation of the _mouseHover_ event honors Corona's layered [drawing model](https://docs.coronalabs.com/guide/graphics/group.html#drawmodel). The event starts at the foremost display object and works its way back. If any of the objects along the way ``````lua return true `````` in their event listeners along the way return `true`, the propogation is stopped.
 
 Display groups can also listen for *mouseHover* events, but only groups that [anchor their children](https://docs.coronalabs.com/api/type/GroupObject/anchorChildren.html) will receive them. This is because groups that do not anchor children extend to infinity in all direction and would thus always test positive for a hover.
 
