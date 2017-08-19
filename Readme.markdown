@@ -1,46 +1,46 @@
 __*[NOTE]:*__ See [Instructions](Instructions.markdown) for these stub documentation files. (Remove this before you deploy your docs)
 
 
-# PLUGIN_NAME: Plugin API Docs
+# mouseHover: Plugin API Docs
 
 |                      | &nbsp; 
 | -------------------- | ---------------------------------------------------------------
 | __Type__             | [TYPE](http://docs.coronalabs.com/api/type/Library.html)
-| __Corona Store__     | [PLUGIN_NAME](http://store.coronalabs.com/plugin/PLUGIN_NAME)
+| __Corona Store__     | [mouseHover](http://store.coronalabs.com/plugin/mouseHover)
 | __Keywords__         | 
 | __See also__         | 
 
 ## Overview
 
-The PLUGIN_NAME plugin can be used in your [Corona](https://coronalabs.com/products/corona-sdk/) project. It enables you to...
+The mouseHover plugin can be used in your [Corona](https://coronalabs.com/products/corona-sdk/) project. It enables you to...
 
 
 ## Syntax
 
-	local PLUGIN_NAME = require "plugin.PLUGIN_NAME"
+	local mouseHover = require "plugin.mouseHover"
 
 ### Functions
 
-##### [PLUGIN_NAME.loadTable()](loadTable.markdown)
+##### [mouseHover.loadTable()](loadTable.markdown)
 
-##### [PLUGIN_NAME.printTable()](printTable.markdown)
+##### [mouseHover.printTable()](printTable.markdown)
 
-##### [PLUGIN_NAME.saveTable()](saveTable.markdown)
+##### [mouseHover.saveTable()](saveTable.markdown)
 
-##### [PLUGIN_NAME.setScope()](setScope.markdown)
+##### [mouseHover.setScope()](setScope.markdown)
 
-##### [PLUGIN_NAME.FUNCTION()](FUNCTION.markdown)
+##### [mouseHover.FUNCTION()](FUNCTION.markdown)
 
 
 ### Properties
 
-##### [PLUGIN_NAME.PROPERTY](PROPERTY.markdown)
+##### [mouseHover.PROPERTY](PROPERTY.markdown)
 
 ## Project Configuration
 
 ### Corona Store Activation
 
-In order to use this plugin, you must activate the plugin at the [Corona Store](http://store.coronalabs.com/plugin/PLUGIN_NAME).
+In order to use this plugin, you must activate the plugin at the [Corona Store](http://store.coronalabs.com/plugin/mouseHover).
 
 
 ### SDK
@@ -55,10 +55,10 @@ settings =
 	plugins =
 	{
 		-- key is the name passed to Lua's 'require()'
-		["plugin.PLUGIN_NAME"] =
+		["plugin.mouseHover"] =
 		{
 			-- required
-			publisherId = "REVERSE_PUBLISHER_URL",
+			publisherId = "REVERSE_btn.sg",
 		},
 	},		
 }
@@ -66,7 +66,7 @@ settings =
 
 ### Enterprise
 
-If you have activated this plugin, you can download this plugin from the corresponding plugin page in the [Corona Store](http://store.coronalabs.com/plugin/PLUGIN_NAME).
+If you have activated this plugin, you can download this plugin from the corresponding plugin page in the [Corona Store](http://store.coronalabs.com/plugin/mouseHover).
 
 
 ## Platform-specific Notes
@@ -82,11 +82,11 @@ You can access sample code [here](SAMPLE_CODE_URL).
 
 ### Support
 
-More support is available from the PUBLISHER_NAME team:
+More support is available from the BTN Pte Ltd team:
 
-* [E-mail](mailto://PUBLISHER_CONTACT@PUBLISHER_URL)
-* [Forum](http://FORUM_URL)
-* [Plugin Publisher](http://PUBLISHER_URL)
+* [E-mail](mailto://info@btn.sg)
+* [Forum](http://btn.sg)
+* [Plugin Publisher](http://btn.sg)
 
 
 ## Compatibility
@@ -99,9 +99,9 @@ More support is available from the PUBLISHER_NAME team:
 | Android (Kindle)             | No
 | Android (NOOK)               | No
 | Android (Ouya)               | No
-| Mac App                      | No
-| Win32 App                    | No
+| Mac App                      | YES
+| Win32 App                    | YES
 | Windows Phone 8              | No
-| Corona Simulator (Mac)       | No
-| Corona Simulator (Win)       | No
+| Corona Simulator (Mac)       | YES
+| Corona Simulator (Win)       | YES
 

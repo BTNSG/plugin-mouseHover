@@ -1,12 +1,12 @@
-# PLUGIN_NAME.loadTable()
+# mouseHover.loadTable()
 
 |                      | &nbsp; 
 | -------------------- | ---------------------------------------------------------------
 | __Type__             | [function](http://docs.coronalabs.com/api/type/Function.html)
-| __Library__          | [PLUGIN_NAME.*](Readme.markdown)
+| __Library__          | [mouseHover.*](Readme.markdown)
 | __Return value__     | [Table](http://docs.coronalabs.com/api/type/Table.html)
 | __Keywords__         | json
-| __See also__         | [PLUGIN_NAME.saveTable()](saveTable.markdown)
+| __See also__         | [mouseHover.saveTable()](saveTable.markdown)
 
 
 ## Overview
@@ -16,8 +16,8 @@ This function loads a JSON file and returns a corresponding Lua table.
 
 ## Syntax
 
-	PLUGIN_NAME.loadTable( filename )
-	PLUGIN_NAME.loadTable( filename, baseDirectory )
+	mouseHover.loadTable( filename )
+	mouseHover.loadTable( filename, baseDirectory )
 
 ##### filename <small>(required)</small>
 _[String](http://docs.coronalabs.com/api/type/String.html)._ The name of the file that will contain the JSON data.
@@ -29,7 +29,7 @@ _[Constant](http://docs.coronalabs.com/api/type/Constant.html)._ Constant corres
 ## Examples
 
 ``````lua
-local PLUGIN_NAME = require 'plugin.PLUGIN_NAME'
+local mouseHover = require 'plugin.mouseHover'
 
-local colors = PLUGIN_NAME.loadTable( "colors.json" )
+local colors = mouseHover.loadTable( "colors.json" )
 ``````

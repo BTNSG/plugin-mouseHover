@@ -1,9 +1,9 @@
-# PLUGIN_NAME.printTable()
+# mouseHover.printTable()
 
 |                      | &nbsp; 
 | -------------------- | ---------------------------------------------------------------
 | __Type__             | [function](http://docs.coronalabs.com/api/type/Function.html)
-| __Library__          | [PLUGIN_NAME.*](Readme.markdown)
+| __Library__          | [mouseHover.*](Readme.markdown)
 | __Return value__     | None
 | __Keywords__         | json
 | __See also__         | 
@@ -16,9 +16,9 @@ This function recursively prints the contents of a table to the console.
 
 ## Syntax
 
-	PLUGIN_NAME.printTable( t )
-	PLUGIN_NAME.printTable( t, label )
-	PLUGIN_NAME.printTable( t, label, indentLevel )
+	mouseHover.printTable( t )
+	mouseHover.printTable( t, label )
+	mouseHover.printTable( t, label, indentLevel )
 
 ##### t <small>(required)</small>
 _[Table](http://docs.coronalabs.com/api/type/Table.html)._ The Lua table you want to print to console.
@@ -33,7 +33,7 @@ _[Number](http://docs.coronalabs.com/api/type/Number.html)._ The number of tabs 
 ## Examples
 
 ``````lua
-local PLUGIN_NAME = require 'plugin.PLUGIN_NAME'
+local mouseHover = require 'plugin.mouseHover'
 
 local colors = 
 {
@@ -45,5 +45,5 @@ local colors =
 	{ name = "yellow",	value = { 1, 1, 0, 1 }, },
 }
 
-PLUGIN_NAME.printTable( colors )
+mouseHover.printTable( colors )
 ``````

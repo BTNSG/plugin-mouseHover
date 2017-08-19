@@ -1,9 +1,9 @@
-# PLUGIN_NAME.FUNCTION()
+# mouseHover.FUNCTION()
 
 |                      | &nbsp; 
 | -------------------- | ---------------------------------------------------------------
 | __Type__             | [function](http://docs.coronalabs.com/api/type/Function.html)
-| __Library__          | [PLUGIN_NAME.*](Readme.markdown)
+| __Library__          | [mouseHover.*](Readme.markdown)
 | __Return value__     | [TYPE]()
 | __Keywords__         | 
 | __See also__         | 
@@ -16,8 +16,8 @@ This function does...
 
 ## Syntax
 
-	PLUGIN_NAME.FUNCTION( ARG1 )
-	PLUGIN_NAME.FUNCTION( ARG1, options )
+	mouseHover.FUNCTION( ARG1 )
+	mouseHover.FUNCTION( ARG1, options )
 
 ##### ARG1 <small>(required)</small>
 _[TYPE]()._ Short description goes here.
@@ -37,7 +37,7 @@ _[TYPE]()._ Short description goes here.
 ## Examples
 
 ``````lua
-local PLUGIN_NAME = require 'plugin.PLUGIN_NAME'
+local mouseHover = require 'plugin.mouseHover'
 
-PLUGIN_NAME.FUNCTION( ARG1 )
+mouseHover.FUNCTION( ARG1 )
 ``````

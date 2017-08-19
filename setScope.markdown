@@ -1,12 +1,12 @@
-# PLUGIN_NAME.setScope()
+# mouseHover.setScope()
 
 |                      | &nbsp; 
 | -------------------- | ---------------------------------------------------------------
 | __Type__             | [function](http://docs.coronalabs.com/api/type/Function.html)
-| __Library__          | [PLUGIN_NAME.*](Readme.markdown)
+| __Library__          | [mouseHover.*](Readme.markdown)
 | __Return value__     | [Table](http://docs.coronalabs.com/api/type/Table.html)
 | __Keywords__         | None
-| __See also__         | [PLUGIN_NAME.saveTable()](saveTable.markdown)
+| __See also__         | [mouseHover.saveTable()](saveTable.markdown)
 
 
 ## Overview
@@ -15,7 +15,7 @@ mouseHover checks for hover events on a particular group (the scope) and all its
 
 ## Syntax
 
-	PLUGIN_NAME.setScope( displayGroup )
+	mouseHover.setScope( displayGroup )
 
 ##### displayGroup <small>(required)</small>
 _[GroupObject](https://docs.coronalabs.com/api/library/display/newGroup.html)._ The display group that you want to set as the scope for checking hover events.
@@ -29,7 +29,7 @@ _[GroupObject](https://docs.coronalabs.com/api/library/display/newGroup.html)._ 
 ## Examples
 
 ``````lua
-local PLUGIN_NAME = require 'plugin.PLUGIN_NAME'
+local mouseHover = require 'plugin.mouseHover'
 
-local colors = PLUGIN_NAME.setScope( "colors.json" )
+local colors = mouseHover.setScope( "colors.json" )
 ``````
