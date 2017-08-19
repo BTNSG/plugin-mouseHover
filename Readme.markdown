@@ -93,7 +93,7 @@ Objects that are not visible (i.e. [object.isVisible](https://docs.coronalabs.co
 ### Sample Code
 
 ``````lua
--- This code draws a funky star shaped thingy and has it light up when the mouse is hovering over it
+-- This code draws a funky star shaped thingy and has it light up when the mouse hovers over it
 
 --* REQUIRE THE PLUGIN *--
 
@@ -118,7 +118,7 @@ o.yScale = 2
 
 o.rotation = 20
 
---* DEFINE THE HOVER EVENT LISTENER FUNCTION *--
+--* DEFINE THE EVENT LISTENER FUNCTION *--
 
 local onMouseHover = function(event)
 	if event.phase == "began" then
@@ -140,11 +140,15 @@ end
 
 o:addEventListener( "mouseHover", onMouseHover )
 
+
+
+-- that's it. 
+
 ``````
 
 ### Support
 
-If you have any questions about __Mouse Hover__, please post them on the [plugin forum](http://btn.sg). If you want to yell at us directly, feel free to [drop us an email](mailto://info@btn.sg) =) Also, here's [our website](http://btn.sg)). (__Spoiler alert!__ Building Corona plugins isn't our raison d'etre) 
+If you have any questions about __Mouse Hover__, please post them on the [plugin forum](http://btn.sg). If you want to reach out directly, feel free to [drop us an email](mailto://info@btn.sg) =) Also, here's [our website](http://btn.sg)). (__Spoiler alert!__ Building Corona plugins isn't our raison d'etre) 
 
 
 ## Compatibility
