@@ -58,9 +58,9 @@ The *mouseHover* event has a *"began"*, *"moved"* and an *"ended"* phase. The ev
 
 The propogation of the _mouseHover_ event honors Corona's layered [drawing model](https://docs.coronalabs.com/guide/graphics/group.html#drawmodel). The event starts at the foremost display object and works its way back. Children of a display group receive the _mouseHover_ event before their parent. As the event propagates, if any of the objects along the way `return true` in their event listeners, the propagation is stopped.
 
-#### &nbsp; Propagation protocol for partially overlapping objects
+#### &nbsp; &nbsp; Sidenote: Propagation with overlapping objects
 
->&nbsp;Consider the case of two partially overlapping objects A and B with B being in front of A. Both the objects respond to _mouseHover_ events but only B returns `true` in its event listener. Say the mouse is hovering over A only, and is then moved onto the overlapping zone. As soon as this happens, B starts receiving the _mouseHover_ event with in the _"began"_ phase, while A receives one last _mouseHover_ event with the phase being _"ended"_. 
+&nbsp; &nbsp;>Consider the case of two partially overlapping objects A and B with B being in front of A. Both the objects respond to _mouseHover_ events but only B returns `true` in its event listener. Say the mouse is hovering over A only, and is then moved onto the overlapping zone. As soon as this happens, B starts receiving the _mouseHover_ event with in the _"began"_ phase, while A receives one last _mouseHover_ event with the phase being _"ended"_. 
 
 Objects that are not visible (i.e. [object.isVisible](https://docs.coronalabs.com/api/type/DisplayObject/isVisible.html) set to false) and objects with an [alpha value](https://docs.coronalabs.com/api/type/DisplayObject/alpha.html) of 0 do not ordinarily receive *mouseHover* events. If you do want such objects to detect hovering, set their [isHoverTestable](isHoverTestable.markdown) property to `true`.
 
