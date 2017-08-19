@@ -13,7 +13,7 @@ __mouseHover__ is a plugin for [Corona](https://coronalabs.com/products/corona-s
 
 The *mouseHover* event has a *"began"*, *"moved"* and an *"ended"* phase. The event also passes on the cursor location as _event.x_ and _event.y_.
 
-The propogation of the _mouseHover_ event honors Corona's layered [drawing model](https://docs.coronalabs.com/guide/graphics/group.html#drawmodel). The event starts at the foremost display object and works its way back. If any of the objects along the way ``````lua return true `````` in their event listeners along the way return `true`, the propogation is stopped.
+The propogation of the _mouseHover_ event honors Corona's layered [drawing model](https://docs.coronalabs.com/guide/graphics/group.html#drawmodel). The event starts at the foremost display object and works its way back. If any of the objects along the way `return true` in their event listeners, the propogation is stopped.
 
 Display groups can also listen for *mouseHover* events, but only groups that [anchor their children](https://docs.coronalabs.com/api/type/GroupObject/anchorChildren.html) will receive them. This is because groups that do not anchor children extend to infinity in all direction and would thus always test positive for a hover.
 
