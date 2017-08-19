@@ -74,7 +74,7 @@ The propogation of the _mouseHover_ event honors Corona's layered [drawing model
 
 
 
-####Propagation protocol for overlapping objects
+#### Propagation protocol for overlapping objects
 
 >Consider the case of two partially overlapping objects A and B with B being in front of A. Both the objects respond to _mouseHover_ events but only B returns `true` in its event listener. Say the mouse is hovering over A only, and is then moved onto the overlapping zone. As soon as this happens, B starts receiving the _mouseHover_ event with in the _"began"_ phase, while A receives one last _mouseHover_ event with the phase being _"ended"_. 
 
