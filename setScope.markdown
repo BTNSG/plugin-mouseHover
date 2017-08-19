@@ -57,5 +57,5 @@ local onCircHover = function(event)
 	print("circleHover", event.phase)
 end
 
-circle:addEventListener( "mouseHover", onMouseHover )
+circle:addEventListener( "mouseHover", onCircHover )
 ``````
