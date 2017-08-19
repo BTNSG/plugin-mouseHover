@@ -54,9 +54,15 @@ settings =
 
 ## How it works
 
-The *mouseHover* event has a *"began"*, *"moved"* and an *"ended"* phase. The event also passes on the target object (_event.target_) and the cursor location (_event.x_ and _event.y_).
+The *mouseHover* event has a *"began"*, *"moved"* and an *"ended"* phase. The event also passes on the target object (_event.target_) and the cursor location (_event.x_ and _event.y_). Simply add a `"mouseHover"` event listener to a display object and handle the hover event however you like in your listener function. Take a look at the [example] below. 
 
 The propogation of the _mouseHover_ event honors Corona's layered [drawing model](https://docs.coronalabs.com/guide/graphics/group.html#drawmodel). The event starts at the foremost display object and works its way back. Children of a display group receive the _mouseHover_ event before their parent. As the event propagates, if any of the objects along the way `return true` in their event listeners, the propagation is stopped.
+
+
+
+## Tips
+
+* Consider using Spiral Code Studio's [Mouse Cursor](https://marketplace.coronalabs.com/plugin/mouse-cursor) plugin along with __Mouse Hover__ to hint at what actions a user can perform. 
 
 
 
@@ -84,7 +90,47 @@ Objects that are not visible (i.e. [object.isVisible](https://docs.coronalabs.co
 
 ### Sample Code
 
-You can access sample code [here](SAMPLE_CODE_URL).
+``````lua
+-- main.lua
+
+local mouseHover = require 'plugin.mouseHover' -- the plugin is activated by default. 
+
+local halfW = display.contentWidth * 0.5
+local halfH = display.contentHeight * 0.5
+
+local defaultAlpha = 0.4
+
+local onMouseHover = function(event)
+	if event.phase == "began" then
+		event.target.isVisible = true
+		event.target.alpha = 1
+		
+
+	elseif event.phase == "ended" then
+
+		event.target.alpha = defaultAlpha
+
+	end
+
+	-- not returning true
+
+end
+
+
+local vertices = { 100,-110, 127,-35, 205,-35, 143,16, 165,90, 80,5, 100-65,90, 100-43,15, 100-105,-35, 100-27,-35}
+ 
+local o = display.newPolygon( halfW, halfH, vertices )
+o.fill = {0.2,0.2,0.7}
+o.strokeWidth = 5
+o:setStrokeColor( 0, 0, 0 )
+o.alpha = defaultAlpha
+o.xScale = 3
+o.yScale = 2
+
+o.rotation = 20
+o:addEventListener( "mouseHover", onMouseHover )
+
+``````
 
 ### Support
 
