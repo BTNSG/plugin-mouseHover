@@ -11,7 +11,7 @@
 
 Hi there! Welcome to the documentation of [__Mouse Hover__](http://store.coronalabs.com/plugin/mouseHover). 
 
-Mouse Hover is a plugin for [Corona](https://coronalabs.com/products/corona-sdk/) projects that are targeting __Windows__ and __macOS__. The plugin allows you to detect when the mouse cursor is hovering over display objects simply by adding a _mouseHover_ event listener to them. For some reason, Corona doesn't appear to support such hover detection out of the box. We kind of needed the ability to check for mouse hovers. We put some code together and it seemed to work pretty ok, so we're sharing it as a plugin. Hope you like it. If you don't let us know what we can change.
+Mouse Hover is a plugin for [Corona](https://coronalabs.com/products/corona-sdk/) projects that are targeting __Windows__ and __macOS__. The plugin allows you to detect when the mouse cursor is hovering over display objects simply by adding a _mouseHover_ event listener to them. For some reason, Corona doesn't appear to support such hover detection out of the box. We kind of needed the ability to check for mouse hovers. We put some code together and it seemed to work pretty ok, so we're sharing it as a plugin. Hope you like it. If you don't [let us know](https://github.com/BTNSG/plugin-mouseHover#support) what we can change.
 
 ## Syntax
 
@@ -88,7 +88,7 @@ You can access sample code [here](SAMPLE_CODE_URL).
 
 ### Support
 
-If you have any questions about __Mouse Hover__, please post them on the [plugin forum](http://btn.sg). If you want to shout at us directly, feel free to [drop us an email](mailto://info@btn.sg). Also, here's our website. (Spoiler alert! building Corona plugins isn't our raison d'etre) 
+If you have any questions about __Mouse Hover__, please post them on the [plugin forum](http://btn.sg). If you want to yell at us directly, feel free to [drop us an email](mailto://info@btn.sg) =) Also, here's [our website](http://btn.sg)). (__Spoiler alert!__ Building Corona plugins isn't our raison d'etre) 
 
 
 ## Compatibility
