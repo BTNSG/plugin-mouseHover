@@ -59,6 +59,9 @@ The *mouseHover* event has a *"began"*, *"moved"* and an *"ended"* phase. The ev
 The propogation of the _mouseHover_ event honors Corona's layered [drawing model](https://docs.coronalabs.com/guide/graphics/group.html#drawmodel). The event starts at the foremost display object and works its way back. Children of a display group receive the _mouseHover_ event before their parent. As the event propagates, if any of the objects along the way `return true` in their event listeners, the propagation is stopped.
 
 
+Objects that are not visible (i.e. [object.isVisible](https://docs.coronalabs.com/api/type/DisplayObject/isVisible.html) set to false) and objects with an [alpha value](https://docs.coronalabs.com/api/type/DisplayObject/alpha.html) of 0 do not ordinarily receive *mouseHover* events. If you do want such objects to detect hovering, set their [isHoverTestable](isHoverTestable.markdown) property to `true`.
+
+
 
 ## Tips
 
@@ -84,21 +87,38 @@ The propogation of the _mouseHover_ event honors Corona's layered [drawing model
 
 >Consider the case of two partially overlapping objects A and B with B being in front of A. Both the objects respond to _mouseHover_ events but only B returns `true` in its event listener. Say the mouse is hovering over A only, and is then moved onto the overlapping zone. As soon as this happens, B starts receiving the _mouseHover_ event with in the _"began"_ phase, while A receives one last _mouseHover_ event with the phase being _"ended"_. 
 
-Objects that are not visible (i.e. [object.isVisible](https://docs.coronalabs.com/api/type/DisplayObject/isVisible.html) set to false) and objects with an [alpha value](https://docs.coronalabs.com/api/type/DisplayObject/alpha.html) of 0 do not ordinarily receive *mouseHover* events. If you do want such objects to detect hovering, set their [isHoverTestable](isHoverTestable.markdown) property to `true`.
 
 
 
 ### Sample Code
 
 ``````lua
--- main.lua
+-- This code draws a funky star shaped thingy and has it light up when the mouse is hovering over it
+
+--* REQUIRE THE PLUGIN *--
 
 local mouseHover = require 'plugin.mouseHover' -- the plugin is activated by default. 
 
+
+--* DRAW A FUNKY STAR *--
+
 local halfW = display.contentWidth * 0.5
 local halfH = display.contentHeight * 0.5
-
 local defaultAlpha = 0.4
+
+local vertices = { 100,-110, 127,-35, 205,-35, 143,16, 165,90, 80,5, 100-65,90, 100-43,15, 100-105,-35, 100-27,-35}
+ 
+local o = display.newPolygon( halfW, halfH, vertices )
+o.fill = {0.2,0.2,0.7}
+o.strokeWidth = 5
+o:setStrokeColor( 0, 0, 0 )
+o.alpha = defaultAlpha
+o.xScale = 3
+o.yScale = 2
+
+o.rotation = 20
+
+--* DEFINE THE HOVER EVENT LISTENER FUNCTION *--
 
 local onMouseHover = function(event)
 	if event.phase == "began" then
@@ -116,18 +136,8 @@ local onMouseHover = function(event)
 
 end
 
+--* SIGN UP FOR mouseHover EVENTS *--
 
-local vertices = { 100,-110, 127,-35, 205,-35, 143,16, 165,90, 80,5, 100-65,90, 100-43,15, 100-105,-35, 100-27,-35}
- 
-local o = display.newPolygon( halfW, halfH, vertices )
-o.fill = {0.2,0.2,0.7}
-o.strokeWidth = 5
-o:setStrokeColor( 0, 0, 0 )
-o.alpha = defaultAlpha
-o.xScale = 3
-o.yScale = 2
-
-o.rotation = 20
 o:addEventListener( "mouseHover", onMouseHover )
 
 ``````
