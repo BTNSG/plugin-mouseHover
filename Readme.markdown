@@ -27,6 +27,8 @@ The PLUGIN_NAME plugin can be used in your [Corona](https://coronalabs.com/produ
 
 ##### [PLUGIN_NAME.saveTable()](saveTable.markdown)
 
+##### [PLUGIN_NAME.setScope()](setScope.markdown)
+
 ##### [PLUGIN_NAME.FUNCTION()](FUNCTION.markdown)
 
 
