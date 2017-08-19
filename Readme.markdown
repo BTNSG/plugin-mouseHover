@@ -1,19 +1,23 @@
-__*[NOTE]:*__ See [Instructions](Instructions.markdown) for these stub documentation files. (Remove this before you deploy your docs)
-
-
 # mouseHover: Plugin API Docs
 
 |                      | &nbsp; 
 | -------------------- | ---------------------------------------------------------------
-| __Type__             | [TYPE](http://docs.coronalabs.com/api/type/Library.html)
+| __Type__             | [CoronaLibrary](https://docs.coronalabs.com/api/type/CoronaLibrary/index.html)
 | __Corona Store__     | [mouseHover](http://store.coronalabs.com/plugin/mouseHover)
 | __Keywords__         | 
 | __See also__         | 
 
 ## Overview
 
-The mouseHover plugin can be used in your [Corona](https://coronalabs.com/products/corona-sdk/) project. It enables you to...
+__mouseHover__ is a plugin for your [Corona](https://coronalabs.com/products/corona-sdk/) projects that are targeting Windows and macOS. It allows you to dectect when the mouse is hovering over display objects simply by adding a "mouseHover" event listener. 
 
+The *mouseHover* event captures *"began"*, *"moved"* and *"ended"* phases and also passes on the cursor location as _event.x_ and _event.y_.
+
+The event propogation honors Corona's layered [drawing model](https://docs.coronalabs.com/guide/graphics/group.html#drawmodel). The event starts at the foremost display object and works its way down to the rearmost display object. If any of the event listeners along the way return `true`, the propogation is stopped.
+
+Display groups can also listen for *mouseHover* events, but only groups that [anchor their children](https://docs.coronalabs.com/api/type/GroupObject/anchorChildren.html) will receive them. This is because groups that do not anchor children extend to infinity in all direction and would thus always test positive for a hover.
+
+Objects that are not visible (i.e. [object.isVisible](https://docs.coronalabs.com/api/type/DisplayObject/isVisible.html) set to false) and objects with an [alpha value](https://docs.coronalabs.com/api/type/DisplayObject/alpha.html) of 0 do not ordinarily receive *mouseHover* events. If you do want such an object to be able to detect a hover, set its [isHoverTestable](isHoverTestable.markdown) property to `true`.
 
 ## Syntax
 
@@ -21,20 +25,12 @@ The mouseHover plugin can be used in your [Corona](https://coronalabs.com/produc
 
 ### Functions
 
-##### [mouseHover.loadTable()](loadTable.markdown)
-
-##### [mouseHover.printTable()](printTable.markdown)
-
-##### [mouseHover.saveTable()](saveTable.markdown)
-
 ##### [mouseHover.setScope()](setScope.markdown)
-
-##### [mouseHover.FUNCTION()](FUNCTION.markdown)
 
 
 ### Properties
 
-##### [mouseHover.PROPERTY](PROPERTY.markdown)
+##### [object.isHoverTestable](isHoverTestable.markdown)
 
 ## Project Configuration
 
