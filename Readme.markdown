@@ -110,11 +110,9 @@ local vertices = { 100,-110, 127,-35, 205,-35, 143,16, 165,90, 80,5, 100-65,90, 
  
 local o = display.newPolygon( halfW, halfH, vertices )
 o.fill = {0.2,0.2,0.7}
-o.strokeWidth = 5
-o:setStrokeColor( 0, 0, 0 )
 o.alpha = defaultAlpha
-o.xScale = 3
-o.yScale = 2
+o.xScale = 6
+o.yScale = 4
 
 o.rotation = 20
 
@@ -148,7 +146,7 @@ o:addEventListener( "mouseHover", onMouseHover )
 
 ### Support
 
-If you have any questions about __Mouse Hover__, please post them on the [plugin forum](http://btn.sg). If you want to reach out directly, feel free to [drop us an email](mailto://info@btn.sg) =) Also, here's [our website](http://btn.sg)). (__Spoiler alert!__ Building Corona plugins isn't our raison d'etre) 
+If you have any questions about __Mouse Hover__, please post them on the [plugin forum](http://btn.sg). If you want to reach out to us directly, feel free to [drop us an email](mailto://info@btn.sg) =) Also, here's [our website](http://btn.sg)). (__Spoiler alert!__ Building Corona plugins isn't our raison d'etre) 
 
 
 ## Compatibility

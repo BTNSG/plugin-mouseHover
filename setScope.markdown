@@ -33,5 +33,29 @@ Of course, all of the _scope_'s children are tested for _mouseHover_ events inde
 ``````lua
 local mouseHover = require 'plugin.mouseHover'
 
-local colors = mouseHover.setScope( "colors.json" )
+local halfW = display.contentWidth * 0.5
+local halfH = display.contentHeight * 0.5
+
+
+local testGroup = display.newGroup()
+testGroup.anchorChildren = true
+testGroup.x = halfW
+testGroup.y = halfH
+
+testGroup:addEventListener( "mouseHover", groupHoverListener )
+
+local circle = display.newCircle(halfW*0.5, halfH*0.5, halfW*0.1)
+circle.rotation = -50
+circle.fill = {0,0.3,0.4}
+circle.alpha = defaultAlpha
+circle.xScale = 5
+circle.yScale = 1.5
+
+testGroup:insert(circle)
+
+local onCircHover = function(event)
+	print("circleHover", event.phase)
+end
+
+circle:addEventListener( "mouseHover", onMouseHover )
 ``````
