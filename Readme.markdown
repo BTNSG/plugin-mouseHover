@@ -16,7 +16,7 @@ Mouse Hover is a plugin for [Corona](https://coronalabs.com/products/corona-sdk/
 Corona doesn't appear to support such hover detection out of the box and we kind of needed it. We put some code together and it seemed to work pretty ok, so we're sharing it as a plugin. Hope you like it. If you don't [let us know](https://github.com/BTNSG/plugin-mouseHover#support) what we can change.
 
 ## Syntax
-
+``````lua
 	local mouseHover = require "plugin.mouseHover"
 
 	local myHoverListener = function(event)
@@ -26,6 +26,7 @@ Corona doesn't appear to support such hover detection out of the box and we kind
 	end
 
 	object:addEventListener("mouseHover", myHoverListener)
+``````
 
 ### Functions
 
