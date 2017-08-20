@@ -90,7 +90,7 @@ Objects that are not visible (i.e. [object.isVisible](https://docs.coronalabs.co
 
 ## Gotchas
 
-* Just like display objects, display groups can also listen for `mouseHover` events. However, only those groups that [anchor their children](https://docs.coronalabs.com/api/type/GroupObject/anchorChildren.html) will receive them. This was done because groups that do not anchor children extend to infinity in all directions and would always test positive for a hover.
+* Only those groups that [anchor their children](https://docs.coronalabs.com/api/type/GroupObject/anchorChildren.html) will receive `"mouseHover"` events. This was done because groups that do not anchor children extend to infinity in all directions and would always test positive for a hover.
 
 * Mouse Hover doesn't keep track of other events that may be occurring simultaneously (for e.g. [touch or tap](https://docs.coronalabs.com/guide/events/touchMultitouch/index.html) events that may occur along with the hover). The plugin also doesn't check for whether the mouse has been [clicked](https://docs.coronalabs.com/api/event/mouse/isPrimaryButtonDown.html) before dispatching `mouseHover` events. Keep this in mind if you are responding to such events in addition to `mouseHover`.
 
@@ -102,6 +102,7 @@ Objects that are not visible (i.e. [object.isVisible](https://docs.coronalabs.co
 
 * In the case of images, _mouseHover_ events are dispatched if the cursor is anywhere within the image's rectangular frame. Mouse Hover cannot tell which part of the image is transparent and which has colored content.
 
+* Except for sliders, Mouse Hover works out of the box with Corona's widgets like buttons and switches. If you want to detect hovers on sub-elements of a widget (e.g. rows of a table view, objects in a scroll view, etc) then `"mouseHover` event listeners will need to be specifically added to those sub-elements.
 
 
 ### Note: Propagation protocol for overlapping objects
