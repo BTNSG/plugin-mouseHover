@@ -102,7 +102,7 @@ Objects that are not visible (i.e. [object.isVisible](https://docs.coronalabs.co
 
 * In the case of images, _mouseHover_ events are dispatched if the cursor is anywhere within the image's rectangular frame. Mouse Hover cannot tell which part of the image is transparent and which has colored content.
 
-* Except for sliders, Mouse Hover works out of the box with Corona's widgets like buttons and switches. If you want to detect hovers on sub-elements of a widget (e.g. rows of a table view, objects in a scroll view, etc) then `"mouseHover` event listeners will need to be specifically added to those sub-elements.
+* Except for sliders, Mouse Hover works out of the box with Corona's widgets like buttons and switches. If you want to detect hovers on sub-elements of a widget (e.g. rows of a table view, objects in a scroll view, etc) then `"mouseHover"` event listeners will need to be specifically added to those sub-elements.
 
 
 ### Note: Propagation protocol for overlapping objects
