@@ -11,13 +11,21 @@
 
 Hi there! Welcome to the documentation for [__Mouse Hover__](http://store.coronalabs.com/plugin/mouseHover). 
 
-Mouse Hover is a plugin for [Corona](https://coronalabs.com/products/corona-sdk/) projects that are targeting __macOS__ and __Windows__. The plugin allows you to detect when the mouse cursor is hovering over display objects by adding a `mouseHover` event listener to them. 
+Mouse Hover is a plugin for [Corona](https://coronalabs.com/products/corona-sdk/) projects that are targeting __macOS__ and __Windows__. The plugin allows you to detect when the mouse cursor is hovering over display objects by adding a `"mouseHover"` event listener to them. 
 
 Corona doesn't appear to support such hover detection out of the box and we kind of needed it. We put some code together and it seemed to work pretty ok, so we're sharing it as a plugin. Hope you like it. If you don't [let us know](https://github.com/BTNSG/plugin-mouseHover#support) what we can change.
 
 ## Syntax
 
 	local mouseHover = require "plugin.mouseHover"
+
+	local myHoverListener = function(event)
+
+		-- respond to the hover event here
+		print(event.phase, event.target, event.x, event.y)
+	end
+
+	object:addEventListener("mouseHover", myHoverListener)
 
 ### Functions
 
