@@ -168,7 +168,7 @@ o:addEventListener( "mouseHover", onMouseHover )
 
 ### Support
 
-If you have any questions about Mouse Hover, please post them on the [plugin forum](http://btn.sg). If you want to reach out to us directly, feel free to [drop us an email](mailto://info@btn.sg) =)
+If you have any questions about Mouse Hover, please post them on the [plugin forum](https://forums.coronalabs.com/topic/70058-mouse-hover/). If you want to reach out to us directly, feel free to [drop us an email](mailto://info@btn.sg) =)
 
 
 ## Compatibility
