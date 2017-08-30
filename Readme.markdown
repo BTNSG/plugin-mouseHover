@@ -73,7 +73,7 @@ To use Mouse Hover in your project,
 
 For an example of these steps, take a look at the [sample code](https://github.com/BTNSG/plugin-mouseHover#sample-code) below. 
 
-The `mouseHover` event captures the state of hovering by reporting a `"began"`, `"moved"` or `"ended"` phase (`event.phase`). The event also provides a reference to the target object (`event.target`) and the cursor location (`event.x_` and `_event.y_`). 
+The `mouseHover` event captures the state of hovering by reporting a `"began"`, `"moved"` or `"ended"` phase (`event.phase`). The event also provides a reference to the target object (`event.target`) and the cursor location (`event.x` and `event.y`). 
 
 The propogation of `mouseHover` events honors Corona's layered [drawing model](https://docs.coronalabs.com/guide/graphics/group.html#drawmodel). The event starts at the foremost display object and works its way back. Children of a display group receive the event before their parent. As the event propagates, if any of the objects along the way `return true` in their event listeners, the propagation is stopped.
 
