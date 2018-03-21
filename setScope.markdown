@@ -36,7 +36,7 @@ testGroup.anchorChildren = true
 testGroup.x = halfW
 testGroup.y = halfH
 
-testGroup:addEventListener( "mouseHover", groupHoverListener )
+mouseHover.setScope(testGroup)
 
 local circle = display.newCircle(halfW*0.5, halfH*0.5, halfW*0.1)
 circle.rotation = -50
